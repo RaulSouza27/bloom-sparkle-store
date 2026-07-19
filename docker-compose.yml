@@ -1,0 +1,9 @@
+services:
+  ursula:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ursula
+    restart: unless-stopped
+    ports:
+      - "2630:80"
