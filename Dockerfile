@@ -20,7 +20,7 @@ RUN rm -rf /etc/nginx/conf.d/*
 COPY nginx.conf /etc/nginx/conf.d/teamhub.conf
 
 # Copia os arquivos buildados
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/.output/public /usr/share/nginx/html
 
 EXPOSE 2630
 CMD ["nginx", "-g", "daemon off;"]
