@@ -45,15 +45,15 @@ function formatBRL(v: number) {
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <AnnouncementBar />
+      {/* <AnnouncementBar /> */}
       <Header />
       <main>
         <Hero />
         <Categories />
         <FeaturedProducts />
         <Differentiators />
-        <Testimonials />
-        <Newsletter />
+        {/* <Testimonials /> */}
+        {/* <Newsletter /> */}
       </main>
       <Footer />
     </div>
