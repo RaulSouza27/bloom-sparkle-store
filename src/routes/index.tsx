@@ -80,7 +80,7 @@ function Header() {
             <span className="block w-5 h-px bg-foreground" />
           </button>
           <a href="/" className="font-serif text-3xl tracking-[0.3em] lg:text-4xl text-center lg:text-left">
-            AURÉ
+            URSULA
           </a>
           <nav className="hidden lg:flex items-center justify-center gap-8 col-start-2 row-start-1">
             {nav.map((item) => (
@@ -296,7 +296,7 @@ function Newsletter() {
 
 function Footer() {
   const cols = [
-    { title: "Institucional", items: ["Sobre a Auré", "Nossa história", "Sustentabilidade", "Trabalhe conosco"] },
+    { title: "Institucional", items: ["Sobre a URSULA", "Nossa história", "Sustentabilidade", "Trabalhe conosco"] },
     { title: "Ajuda", items: ["Política de troca", "Frete e prazos", "Guia de tamanhos", "Perguntas frequentes"] },
     { title: "Contato", items: ["atendimento@aure.com.br", "WhatsApp: (11) 9 0000-0000", "Seg. a sex., 9h às 18h"] },
   ];
@@ -305,7 +305,7 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-16">
         <div className="grid lg:grid-cols-4 gap-10 mb-12">
           <div>
-            <div className="font-serif text-3xl tracking-[0.3em] mb-4">AURÉ</div>
+            <div className="font-serif text-3xl tracking-[0.3em] mb-4">URSULA</div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
               Joias femininas atemporais, feitas à mão em ouro 18k e prata 925.
             </p>
@@ -327,7 +327,7 @@ function Footer() {
         </div>
         <div className="hairline mb-8" />
         <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-muted-foreground">
-          <p>© 2026 Auré Joias. Todos os direitos reservados. CNPJ 00.000.000/0001-00</p>
+          <p>© 2026 URSULA Joias. Todos os direitos reservados. CNPJ 00.000.000/0001-00</p>
           <p className="tracking-widest uppercase">Visa · Mastercard · Pix · Boleto · Amex</p>
         </div>
       </div>
