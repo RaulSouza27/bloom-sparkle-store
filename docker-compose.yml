@@ -6,4 +6,4 @@ services:
     container_name: ursula
     restart: unless-stopped
     ports:
-      - "2630:2630"
+      - "7712:7712"
