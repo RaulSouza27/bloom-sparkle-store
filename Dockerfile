@@ -21,6 +21,7 @@ COPY --from=builder /app/.output /app/.output
 # A porta padrão onde a app roda (em Railway ela pode ser substituída pela variável PORT)
 EXPOSE 2630
 
+ENV HOST=0.0.0.0
 ENV PORT=2630
 ENV NODE_ENV=production
 
