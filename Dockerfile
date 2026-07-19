@@ -19,9 +19,9 @@ WORKDIR /app
 COPY --from=builder /app/.output /app/.output
 
 # A porta padrão onde a app roda (em Railway ela pode ser substituída pela variável PORT)
-EXPOSE 3000
+EXPOSE 2630
 
-ENV PORT=3000
+ENV PORT=2630
 ENV NODE_ENV=production
 
 CMD ["node", ".output/server/index.mjs"]
