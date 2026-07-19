@@ -6,21 +6,22 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
+ENV NITRO_PRESET=node-server
 RUN npm run build
 
 # ─────────────────────────────────────────────
-#  Stage 2 – Serve com Nginx
+#  Stage 2 – Runner
 # ─────────────────────────────────────────────
-FROM nginx:1.27-alpine AS runner
+FROM node:22-alpine AS runner
+WORKDIR /app
 
-# Remove TUDO da pasta conf.d (evita o default.conf voltar)
-RUN rm -rf /etc/nginx/conf.d/*
+# Copia todo o output compilado do Nitro do estágio de build
+COPY --from=builder /app/.output /app/.output
 
-# Copia nossa config customizada
-COPY nginx.conf /etc/nginx/conf.d/teamhub.conf
+# A porta padrão onde a app roda (em Railway ela pode ser substituída pela variável PORT)
+EXPOSE 3000
 
-# Copia os arquivos buildados
-COPY --from=builder /app/.output/public /usr/share/nginx/html
+ENV PORT=3000
+ENV NODE_ENV=production
 
-EXPOSE 2630
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["node", ".output/server/index.mjs"]
